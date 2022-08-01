@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!--声明student对象
+            注入就是赋值的意思
+            di：给属性赋值
+            1.set注入（设置注入）：spring调用类的set方法，可以在set方法中完成属性赋值
+            1）简单类型的set注入
+                <bean id="xx" class="yy">
+                        <property name="属性名字" value="此属性的值" />
+                        一个property只能给一个属性赋值
+                        <property ...>
+                </bean>
+            2）引用类型的set注入：spring调用类的set方法
+                 <bean id="xx" class="yy">
+                        <property name="属性名字" ref="bean对象的id（对象的名称）" />
+
+                </bean>
+           2.构造注入：spring调用类的有参构造方法，在创建对象的同时，在构造方法中给属性赋值。
+              构造注入使用<constructor-arg>标签
+              <constructor-arg>标签：一个<constructor-arg>表示构造方法中的一个参数。
+              <constructor-arg>标签属性：
+                name:表示构造方法的形参名
+                index:表示构造方法参数的位置，参数从左往右是0，1,2的顺序
+                value:构造方法的形参类型是简单类型的，使用value
+                ref:构造方法的形参类型是引用类型的，使用ref
+        -->
+        <!--使用name属性实现构造注入-->
+        <bean id="mystudent" class="example.ba03.Student" >
+                <constructor-arg name="name" value="张三"></constructor-arg>
+                <constructor-arg name="age" value="34"></constructor-arg>
+                <constructor-arg name="school" ref="myschool"></constructor-arg>
+        </bean>
+        <alias name="mystudent" alias="student"/>
+        <!--使用index属性-->
+        <bean id="mystudent2" class="example.ba03.Student" >
+                <constructor-arg index="0" value="李四"></constructor-arg>
+                <constructor-arg index="1" value="20"></constructor-arg>
+                <constructor-arg name="school" ref="myschool"></constructor-arg>
+        </bean>
+        <!--声明School对象-->
+        <bean id="myschool" class="example.ba03.School">
+                <property name="name" value="北京大学"></property>
+                <property name="address" value="北京市海淀区"></property>
+        </bean>
+</beans>

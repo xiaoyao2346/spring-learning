@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch02-di-xml" />
+        <module name="ch01-helloSpring" />
+        <module name="ch04-di-anno" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ch01-helloSpring" target="1.7" />
+      <module name="ch02-di-xml" target="1.7" />
+      <module name="ch02-di-xml (1)" target="1.7" />
+      <module name="ch02-di-xml (2)" target="1.7" />
+      <module name="ch04-di-anno" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ch04-di-anno" options="" />
+    </option>
+  </component>
+</project>
