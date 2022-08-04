@@ -1,4 +1,4 @@
-package org.example.ba07.ba06;
+package org.example.ba07;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

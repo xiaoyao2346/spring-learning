@@ -23,7 +23,7 @@ public class Student {
     *
     * */
     @Value(value = "张飞")
-    private String name;
+    public String name;
     @Value(value = "29")
     private Integer age;
 
@@ -35,7 +35,7 @@ public class Student {
      *        2.在set方法的上面
      * */
     //默认是byName自动注入：先使用byName自动注入，如果byName赋值失败，再使用byType
-    @Resource
+    @Autowired
     private School school;
 
     public Student(){
