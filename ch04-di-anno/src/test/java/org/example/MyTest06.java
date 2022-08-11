@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.ba06.School;
 import org.example.ba06.Student;
 import org.example.myannotation.Xiao;
 import org.junit.Test;
@@ -12,6 +13,10 @@ public class MyTest06 {
 
     @Test
     public void test01(){
+
+        School school = new School();
+        System.out.println("school="+school);
+
         String config = "applicationContext.xml";
         ApplicationContext context = new ClassPathXmlApplicationContext(config);
         // 从容器中获取对象

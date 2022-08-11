@@ -1,15 +1,21 @@
 package org.example.ba06;
 
 
+import org.example.myannotation.Xiao;
+import org.example.myannotation.XiaoHandler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("myschool")
 public class School {
-    @Value("航空航天大学")
+    @Xiao("航空航天大学")
     private String name;
-    @Value("北京市海淀区")
+    @Xiao("北京市海淀区")
     private String address;
+
+    public School(){
+        XiaoHandler.xiaohandler(this);
+    }
 
     public void setName(String name) {
         this.name = name;

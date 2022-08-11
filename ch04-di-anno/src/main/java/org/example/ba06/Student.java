@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 @Component("mystudent")
 public class Student {
 
-    /*
+    /**
     *   @Value：简单类型的属性赋值
     *     属性：value是String类型的，表示简单类型的属性值
     *     位置：1.在属性上面，无需set方法，推荐使用
@@ -24,9 +24,9 @@ public class Student {
     *    2.在属性上面@Qualifier(value = "bean的id)：表示使用指定名称的bean完成赋值
     *
     * */
-    @Xiao(value = "张飞")
+    @Xiao(value = "张三")
     public String name;
-    @Value(value = "29")
+
     private Integer age;
 
     /**
