@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.ba06.Student;
+import org.example.myannotation.Xiao;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,7 +15,7 @@ public class MyTest06 {
         String config = "applicationContext.xml";
         ApplicationContext context = new ClassPathXmlApplicationContext(config);
         // 从容器中获取对象
-        Student student = (Student) context.getBean("mystudent");
+        Student student = new Student();//(Student) context.getBean("mystudent");
         System.out.println("student="+student);
         Class cl = student.getClass();
         System.out.println(cl.hashCode());

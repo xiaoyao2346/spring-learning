@@ -1,5 +1,7 @@
 package org.example.ba06;
 
+import org.example.myannotation.Xiao;
+import org.example.myannotation.XiaoHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,7 +24,7 @@ public class Student {
     *    2.在属性上面@Qualifier(value = "bean的id)：表示使用指定名称的bean完成赋值
     *
     * */
-    @Value(value = "张飞")
+    @Xiao(value = "张飞")
     public String name;
     @Value(value = "29")
     private Integer age;
@@ -40,6 +42,7 @@ public class Student {
 
     public Student(){
         System.out.println("==Student无参构造方法===");
+        XiaoHandler.xiaohandler(this);
     }
 
     public void setName(String name) {
