@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ch01-helloSpring/ch01-helloSpring.iml" filepath="$PROJECT_DIR$/ch01-helloSpring/ch01-helloSpring.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch02-di-xml/ch02-di-xml.iml" filepath="$PROJECT_DIR$/ch02-di-xml/ch02-di-xml.iml" />
       <module fileurl="file://$PROJECT_DIR$/ch04-di-anno/ch04-di-anno.iml" filepath="$PROJECT_DIR$/ch04-di-anno/ch04-di-anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ch05-aop-leadin/ch05-aop-leadin.iml" filepath="$PROJECT_DIR$/ch05-aop-leadin/ch05-aop-leadin.iml" />
     </modules>
   </component>
 </project>
